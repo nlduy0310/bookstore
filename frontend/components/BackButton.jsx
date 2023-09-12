@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes, { string } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { BsArrowLeft } from 'react-icons/bs';
 
@@ -12,5 +12,9 @@ const BackButton = ({ destination = '/' }) => {
 		</div>
 	);
 };
+
+BackButton.propTypes = {
+	destination: string
+}
 
 export default BackButton;

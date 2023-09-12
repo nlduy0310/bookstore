@@ -60,7 +60,12 @@ const BooksTable = (props) => {
 };
 
 BooksTable.propTypes = {
-	books: PropTypes.arrayOf(PropTypes.object).isRequired,
+    books: PropTypes.arrayOf(PropTypes.shape({
+        _id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        publishYear: PropTypes.string.isRequired
+    })).isRequired
 };
 
 export default BooksTable;
