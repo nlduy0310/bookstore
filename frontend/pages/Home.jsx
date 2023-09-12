@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom';
-import { AiOutlineEdit } from 'react-icons/ai';
-import { BsInfoCircle } from 'react-icons/bs';
-import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
-import BooksCard from '../components/home/BooksCard';
+import { MdOutlineAddBox } from 'react-icons/md';
+import BooksGrid from '../components/home/BooksCard';
 import BooksTable from '../components/home/BooksTable';
 
 const Home = () => {
@@ -54,7 +52,7 @@ const Home = () => {
 			) : showType == 'table' ? (
 				<BooksTable books={books} />
 			) : (
-				<BooksCard books={books} />
+				<BooksGrid books={books} />
 			)}
 		</div>
 	);
