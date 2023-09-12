@@ -57,7 +57,7 @@ const BookCard = (props) => {
 
 BookCard.propTypes = {
 	id: PropTypes.string.isRequired,
-	publishYear: PropTypes.string.isRequired,
+	publishYear: PropTypes.number.isRequired,
 	title: PropTypes.string.isRequired,
 	author: PropTypes.string.isRequired,
 };

@@ -14,7 +14,7 @@ const Home = () => {
 		setIsLoading(true);
 
 		axios
-			.get('http://localhost:2000/books')
+			.get(`${import.meta.env.VITE_BACKEND_BASE_URL}/books`)
 			.then((response) => {
 				setBooks(response.data.books);
 				setIsLoading(false);

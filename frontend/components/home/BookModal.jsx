@@ -47,7 +47,7 @@ BookModal.propTypes = {
 	id: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	author: PropTypes.string.isRequired,
-	publishYear: PropTypes.string.isRequired,
+	publishYear: PropTypes.number.isRequired,
 	onClose: PropTypes.func.isRequired,
 };
 

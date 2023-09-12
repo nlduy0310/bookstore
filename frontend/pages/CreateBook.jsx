@@ -21,14 +21,14 @@ const CreateBook = () => {
 		};
 
 		axios
-			.post('http://localhost:2000/books', bookData)
+			.post(`${import.meta.env.VITE_BACKEND_BASE_URL}/books`, bookData)
 			.then(() => {
 				setLoading(false);
-				enqueueSnackbar('Book created successfully!', {variant: 'success'});
+				enqueueSnackbar('Book created successfully!', { variant: 'success' });
 				navigate('/');
 			})
 			.catch((error) => {
-				enqueueSnackbar('An error happened. Please try again!', {variant: 'error'});
+				enqueueSnackbar('An error happened. Please try again!', { variant: 'error' });
 				console.error(error);
 				setLoading(false);
 			});
@@ -61,10 +61,10 @@ const CreateBook = () => {
 						value={publishYear}
 						onChange={(event) => setPublishYear(event.target.value)}
 						className="border-2 border-gray-500 px-4 py-2 w-full"
-          />
-          <button className='p-2 bg-sky-300 m-8' onClick={handleCreation}>
-            Save
-          </button>
+					/>
+					<button className="p-2 bg-sky-300 m-8" onClick={handleCreation}>
+						Save
+					</button>
 				</div>
 			</div>
 		</div>
